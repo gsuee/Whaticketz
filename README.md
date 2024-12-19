@@ -114,7 +114,7 @@ docker compose -f docker-compose-local.yaml up -d
 
 On the first run, the system will initialize the databases and tables, and after a few minutes, WhaWhaticketz will be accessible through port 3000.
 
-The default username is `admin@Whaticketz.host`, and the default password is 123456.
+The default username is `admin@ticketz.host`, and the default password is 123456.
 
 The application will restart automatically after each server reboot.
 
