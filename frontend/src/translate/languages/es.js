@@ -871,7 +871,7 @@ const messages = {
 			presence: {
 				unavailable: "Indisponible",
 				available: "Disponible",
-				composing: "Componiendo",
+				composing: "Escribiendo",
 				recording: "Grabando",
 				paused: "Pausado",
 			},
