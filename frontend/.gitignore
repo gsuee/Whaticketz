@@ -1,0 +1,8 @@
+/node_modules
+/dist
+/.well-known
+/.env
+/build
+/.project
+/public/config.json
+/public/socket-admin
