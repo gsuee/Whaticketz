@@ -369,7 +369,7 @@ const downloadMedia = async (msg: proto.IWebMessageInfo, wbot: Session, ticket: 
   const fileLimit = parseInt(await CheckSettings("downloadLimit", "15"), 10);
   if (wbot && message?.fileLength && +message.fileLength > fileLimit*1024*1024) {
     const fileLimitMessage = {
-      text: `*Mensagem Automática*:\nNosso sistema aceita apenas arquivos com no máximo ${fileLimit} MiB`
+      text: `*Mensaje automático*:\nNuestro sistema sólo acepta archivos con un tamaño máximo de ${fileLimit} MiB`
     };
 
     if (!ticket.isGroup) {
@@ -378,7 +378,7 @@ const downloadMedia = async (msg: proto.IWebMessageInfo, wbot: Session, ticket: 
         fileLimitMessage
       );
 
-      sendMsg.message.extendedTextMessage.text = "*Mensagem do sistema*:\nArquivo recebido além do limite de tamanho do sistema, se for necessário ele pode ser obtido no aplicativo do whatsapp.";
+      sendMsg.message.extendedTextMessage.text = "*Mensaje del sistema*:\nArchivo recibido más allá del límite de tamaño del sistema, si es necesario se puede obtener de la aplicación whatsapp.";
 
       // eslint-disable-next-line no-use-before-define
       await verifyMessage(sendMsg, ticket, ticket.contact);
@@ -982,8 +982,8 @@ const startQueue = async (wbot: Session, ticket: Ticket, queue: Queue) => {
         !isNil(currentSchedule) &&
         (!currentSchedule || currentSchedule.inActivity === false)
       ) {
-        const outOfHoursMessage = queue.outOfHoursMessage?.trim() || "Estamos fora do horário de expediente";
-        const body = formatBody(`${outOfHoursMessage}\n\n*[ # ]* - Voltar ao Menu Principal`, ticket.contact);
+        const outOfHoursMessage = queue.outOfHoursMessage?.trim() || "Estamos fuera del horario de oficina";
+        const body = formatBody(`${outOfHoursMessage}\n\n*[ # ]* - Volver al menú principal`, ticket.contact);
         const sentMessage = await wbot.sendMessage(
           `${contact.number}@${ticket.isGroup ? "g.us" : "s.whatsapp.net"}`, {
           text: body,
@@ -1201,7 +1201,7 @@ export const handleRating = async (
       rate: finalRate,
     });
 
-    const complationMessage = whatsapp.complationMessage.trim() || "Atendimento finalizado";
+    const complationMessage = whatsapp.complationMessage.trim() || "Chat finalizado";
     const body = formatBody(`${complationMessage}`, ticket.contact);
     await SendWhatsAppMessage({ body, ticket });
 
@@ -1547,7 +1547,7 @@ const handleMessage = async (
                   `${ticketTracking.ticket.contact.number}@${ticketTracking.ticket.isGroup ? "g.us" : "s.whatsapp.net"
                   }`,
                   {
-                    text: "\n*Por favor avalie nosso atendimento com uma nota de 1 a 5*"
+                    text: "\n*por favr valore nuestro servicio del 1 al 5*"
                   }
                 );
               },
@@ -1629,7 +1629,7 @@ const handleMessage = async (
           !isNil(currentSchedule) &&
           (!currentSchedule || currentSchedule.inActivity === false)
         ) {
-          const body = `${whatsapp.outOfHoursMessage.trim() || "Estamos fora do horário de expediente"}`;
+          const body = `${whatsapp.outOfHoursMessage.trim() || "Estamos fuera del horario de oficina"}`;
 
           const debouncedSentMessage = debounce(
             async () => {
@@ -1661,7 +1661,7 @@ const handleMessage = async (
             !isNil(currentSchedule) &&
             (!currentSchedule || currentSchedule.inActivity === false)
           ) {
-            const outOfHoursMessage = queue.outOfHoursMessage?.trim() || "Estamos fora do horário de expediente";
+            const outOfHoursMessage = queue.outOfHoursMessage?.trim() || "Estamos fuera del horario de oficina";
             const body = `${outOfHoursMessage}`;
             const debouncedSentMessage = debounce(
               async () => {
@@ -1715,7 +1715,7 @@ const handleMessage = async (
             !isNil(currentSchedule) &&
             (!currentSchedule || currentSchedule.inActivity === false)
           ) {
-            const outOfHoursMessage = queue.outOfHoursMessage?.trim() || "Estamos fora do horário de expediente";
+            const outOfHoursMessage = queue.outOfHoursMessage?.trim() || "Estamos fuera del horario de oficina";
             const body = `${outOfHoursMessage}`;
             const debouncedSentMessage = debounce(
               async () => {
@@ -1911,7 +1911,7 @@ export const sendMessageImage = async (
     sentMessage = await wbot.sendMessage(
       `${contact.number}@${ticket.isGroup ? "g.us" : "s.whatsapp.net"}`,
       {
-        text: formatBody("Não consegui enviar o PDF, tente novamente!", contact)
+        text: formatBody("No he podido enviar el PDF, inténtalo de nuevo!", contact)
       }
     );
   }
@@ -1939,7 +1939,7 @@ export const sendMessageLink = async (
   } catch (error) {
     sentMessage = await wbot.sendMessage(
       `${contact.number}@${ticket.isGroup ? "g.us" : "s.whatsapp.net"}`, {
-      text: formatBody("Não consegui enviar o PDF, tente novamente!", contact)
+      text: formatBody("No he podido enviar el PDF, inténtalo de nuevo!", contact)
     }
     );
   }
