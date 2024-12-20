@@ -331,10 +331,10 @@ const messages = {
 				listItems: {
 					dashboard: "Tablero",
 					connections: "Conexiones",
-					tickets: "Atenciones",
+					tickets: "Chat's",
 					quickMessages: "Respuestas Rápidas",
 					contacts: "Contactos",
-					queues: "Filas y Chatbot",
+					queues: "Departamentos",
 					tags: "Etiquetas",
 					administration: "Administración",
 					service: "Atención",
@@ -638,18 +638,18 @@ const messages = {
 			},
 			about: {
 				aboutthe: "Acerca de",
-				copyright: "© 2024 - Funcionando com ticketz",
+				copyright: "© 2024 - Whaticketz",
 				buttonclose: "Cerrar",
-				title: "Acerca de ticketz",
+				title: "Acerca de Whaticketz",
 				abouttitle: "Origen y Mejoras",
-        aboutdetail: "El ticketz es derivado indirecto del proyecto Whaticket con mejoras compartidas por los desarrolladores del sistema EquipeChat a través del canal VemFazer en YouTube, posteriormente mejorado por Claudemir Todo Bom.",
+        aboutdetail: "El Whaticketz es derivado indirecto del proyecto Whaticket con mejoras compartidas por los desarrolladores del sistema EquipeChat a través del canal VemFazer en YouTube, posteriormente mejorado por Claudemir Todo Bom.",
 				aboutauthorsite: "Sitio del autor",
 				aboutwhaticketsite: "Sitio de la Comunidad Whaticket en Github",
 				aboutvemfazersite: "Sitio del canal Vem Fazer en Github",
 				licenseheading: "Licencia de Código Abierto",
-        licensedetail: "El ticketz está licenciado bajo la Licencia Pública General Affero de GNU versión 3, lo que significa que cualquier usuario que tenga acceso a esta aplicación tiene derecho a obtener acceso al código fuente. Más información en los siguientes enlaces:",
+        licensedetail: "El Whaticketz está licenciado bajo la Licencia Pública General Affero de GNU versión 3, lo que significa que cualquier usuario que tenga acceso a esta aplicación tiene derecho a obtener acceso al código fuente. Más información en los siguientes enlaces:",
 				licensefulltext: "Texto completo de la licencia",
-        licensesourcecode: "Código fuente de ticketz"
+        licensesourcecode: "Código fuente de Whaticketz"
 			},
 			schedules: {
 				title: "Agendamentos",
@@ -943,9 +943,9 @@ const messages = {
 				ERR_WAPP_GREETING_REQUIRED:
 					"El mensaje de saludo es obligatorio cuando hay más de una cola.",
 			},
-			ticketz: {
+			Whaticketz: {
 				support: {
-					title: "Apoyar el proyecto Ticketz",
+					title: "Apoyar el proyecto WhaTicketz",
 					mercadopagotitle: "Tarjeta de crédito",
 					recurringbrl: "Donaciones recurrentes en BRL",
 					paypaltitle: "Tarjeta de crédito",
