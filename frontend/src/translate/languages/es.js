@@ -594,7 +594,7 @@ const messages = {
 				title: "Configuraciones de Campañas",
 			},
 			queues: {
-				title: "Colas y Chatbot",
+				title: "Departamentos y Chatbot",
 				table: {
 					name: "Nombre",
 					color: "Color",
@@ -602,7 +602,7 @@ const messages = {
 					actions: "Acciones",
 				},
 				buttons: {
-					add: "Agregar cola",
+					add: "Agregar Depart",
 				},
 				confirmationModal: {
 					deleteTitle: "Eliminar",
