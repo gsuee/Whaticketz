@@ -439,7 +439,7 @@ const Dashboard = () => {
       <Container maxWidth="lg" className={classes.container}>
         <Grid container spacing={3} justifyContent="flex-end">
 
-          <OnlyForSuperUser
+          {/*<OnlyForSuperUser
             user={currentUser}
             yes={() => (
               <Grid item xs={12}>
@@ -563,7 +563,7 @@ const Dashboard = () => {
                   }
                 </Paper>
               </Grid>
-            )} />
+            )} /> 
 
           {/* DASHBOARD ATENDIMENTOS HOJE */}
           
